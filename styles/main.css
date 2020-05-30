@@ -20,13 +20,7 @@ a {
 
 a {
   @apply text-primary underline;
-
 }
-
-time {
-  @apply text-sm text-secondary opacity-50;
-}
-
 
 @tailwind components;
 @tailwind utilities;

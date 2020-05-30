@@ -1,8 +1,20 @@
-<div class="border rounded border-secondary bg-foreground pt-2 shadow-md">  
+{# <div class="border rounded border-secondary bg-foreground pt-2 shadow-md">  
   <h3 class="px-3 pb-3 truncate">{{ post.data.title }}</h3>
   <p class="px-4">{{ post.data.description }}</p>
   <time class="px-4" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>  
   {% if post.data.cover %}
     <img src="{{ post.data.cover}}" />
   {% endif %}
-</div>
+</div> #}
+
+<li class="py-2 hover:bg-primary rounded px-2 group cursor-pointer">
+  <a class="no-underline" href="{{ post.url | url }}">
+    <h3 class="group-hover:text-black">{{ post.data.title }} <span class="text-xs">🔗</span> </h3>
+    <p class="pb-2">{{ post.data.description}}</p>
+    <div>
+      <time class="text-sm text-secondary opacity-50"  datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>  
+
+      {# Here will go the DEV.to comments and likes #}
+    </div>    
+  </a>
+</li>

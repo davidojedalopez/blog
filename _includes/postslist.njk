@@ -1,12 +1,18 @@
-<div class="pt-4 pb-2 px-2">
+<div class="pt-4 pb-2">
   <p>Most recent</p>
 </div>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 sm:col-gap-6 row-gap-6 px-2">  
+{# <div class="grid grid-cols-1 sm:grid-cols-2 sm:col-gap-6 row-gap-6 px-2">  
   {% for post in postsList | reverse %}
     {% include "postitem.njk" %}
   {% endfor %}
-</div>
+</div> #}
+
+<ul class="max-w-md list-none divide-y divide-opacity-50 divide-primary">
+  {% for post in postsList | reverse %}
+    {% include "postitem.njk" %}
+  {% endfor %}
+</ul>
 
 {# <ol class="" style="counter-reset: start-from {{ (postsListCount or postsList.length) + 1 }}">
 {% for post in postsList | reverse %}
