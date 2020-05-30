@@ -1,10 +1,13 @@
 ---
-title: This is my third post.
-description: This is a post on My Blog about win-win survival strategies.
+title: Extend nginx/Apache Proxy Configurations on AWS ElasticBeanstalk
+description:  Use .ebextensions feature of AWS ElasticBeanstalk to define custom configurations for your proxy server
 date: 2018-08-24
 tags:
   - second-tag
 layout: layouts/post.njk
+cover: https://res.cloudinary.com/practicaldev/image/fetch/s--m9Atdxe4--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/8ndsgtt91bqudopf8m7o.png
+comments_count: 0
+positive_reactions_count: 11
 ---
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 

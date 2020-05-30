@@ -5,10 +5,86 @@ eleventyNavigation:
   order: 1
 ---
 
-<h1>Latest 3 Posts</h1>
+<section id="blog" class="bg-background px-5">
+  <div class="relative z-10">    
+    <h2 class="transform rotate-6 pr-4 text-primary font-bold inline-block bg-background">Blog</h2>
+    <hr class="border-t-1 -pl-6 absolute w-full divider border-secondary">    
+  </div>                
+  
+  {% set postsList = collections.posts | head(-4) %}  
+  {% set postsListCount = collections.posts | length %}
 
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
+  {% include "postslist.njk" %}
+  
+  <button class="mt-6 w-full text-3xl text-primary bg-background border-2 rounded border-primary p-1 font-bold shadow-md">Show all posts</button>
+</section>
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+<section id="social" class="bg-foreground px-5 pt-12">  
+    <div class="relative z-10 mb-4">    
+      <h2 class="transform -rotate-6 pr-4 text-primary font-bold inline-block bg-foreground">Social</h2>
+      <hr class="border-t-1 -pl-6 absolute w-full divider border-secondary">    
+    </div>
+    
+    <img class="shaped-outside float-left -ml-6" src="/img/nina_best.png" />    
+
+    <div class="pl-2 inline-flex mb-2 sm:mb-6 leading-none sm:leading-snug cursor-pointer">
+      <img src="/img/twitter.svg" class="pr-2" width="40" />
+      <div class="social-element twitter rounded p-2 group">
+        <h3 class="text-base sm:text-xl">Twitter</h3>
+        <p class="text-xs sm:text-base">I tweet about software 🌈</p>
+      </div>
+    </div>
+
+    <div class="pl-2 inline-flex mb-2 sm:mb-6 leading-none sm:leading-snug cursor-pointer">
+      <img src="/img/dev.svg" class="pr-2" width="40" />
+      <div class="social-element dev rounded p-2">
+        <h3 class="text-base sm:text-xl">DEV</h3>
+        <p class="text-xs sm:text-base">I write about software ✍🏼</p>
+      </div>
+    </div>
+
+    <div class="pl-2 inline-flex mb-2 sm:mb-6 leading-none sm:leading-snug cursor-pointer">
+      <img src="/img/github.svg" class="pr-2" width="40" />
+      <div class="social-element github rounded p-2">
+        <h3 class="text-base sm:text-xl">GitHub</h3>
+        <p class="text-xs sm:text-base">I code 👨‍💻</p>
+      </div>
+    </div>
+
+    <div class="pl-2 inline-flex mb-2 sm:mb-6 leading-none sm:leading-snug cursor-pointer">
+      <img src="/img/linkedin.svg" class="pr-2" width="40" />
+      <div class="social-element linkedin rounded p-2">
+        <h3 class="text-base sm:text-xl">LinkedIn</h3>
+        <p class="text-xs sm:text-base">I exist 😁</p>
+      </div>
+    </div>
+   
+    <div class="pl-2 inline-flex mb-2 sm:mb-6 leading-none sm:leading-snug cursor-pointer">
+      <img src="/img/instagram.svg" class="pr-2" width="40" />
+      <div class="social-element instagram rounded p-2">
+        <h3 class="text-base sm:text-xl">Instagram</h3>
+        <p class="text-xs sm:text-base">She barks</p>
+      </div>
+    </div>
+    
+</section>
+
+<section id="favorites" class="bg-background px-5 py-8">
+  <div class="relative z-10 mb-4">    
+    <h2 class="transform rotate-6 pr-4 text-primary font-bold inline-block bg-background">Favorites</h2>
+    <hr class="border-t-1 -pl-6 absolute w-full divider border-secondary">    
+  </div>
+
+  <div class="flex justify-between mb-3">
+    <h3 class="p-3 rounded-r bg-tertiary text-black -ml-5">Books 📚</h3>
+    <h3 class="p-3 rounded-l bg-tertiary text-black -mr-5">🎲 Board games</h3>
+  </div>
+  <div class="flex justify-between mb-3">
+    <h3 class="p-3 rounded-r bg-tertiary text-black -ml-5">Videogames 🎮</h3>
+    <h3 class="p-3 rounded-l bg-tertiary text-black -mr-5">📝 Blog posts</h3>
+  </div>
+  <div class="flex justify-between">
+    <h3 class="p-3 rounded-r bg-tertiary text-black -ml-5">Twitter follows ↪️</h3>
+    <h3 class="p-3 rounded-l bg-tertiary text-black -mr-5">🎸 Music</h3>
+  </div>
+</section>

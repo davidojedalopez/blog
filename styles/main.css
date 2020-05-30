@@ -1,0 +1,94 @@
+@tailwind base;
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-xl text-tertiary;
+}
+
+p,
+a {
+  @apply text-base text-secondary;  
+  hyphens: auto;
+}
+
+a {
+  @apply text-primary underline;
+
+}
+
+time {
+  @apply text-sm text-secondary opacity-50;
+}
+
+
+@tailwind components;
+@tailwind utilities;
+
+.mirror-x {
+  transform: scale(-1, 1);
+}
+
+header {
+  background-image: url(/img/wave.svg);
+  background-size: cover;
+  min-height: 9rem;
+}
+
+.divider {
+  top: 50%;
+  z-index: -1;
+}
+
+#blog {
+  background-image: url(/img/line.svg);
+  background-size: cover;
+}
+
+.shaped-outside {
+  shape-outside: url(/img/nina_best.png);
+  width: 43%;
+}
+
+.social-element.twitter:hover {  
+  background: linear-gradient(to right, rgb(120,210,250) 10%, #586674);  
+}
+
+.social-element.dev:hover {  
+  background: linear-gradient(to right, black 10%, #586674);                
+}
+
+.social-element.linkedin:hover {  
+  background: linear-gradient(to right, rgb(0,116,179) 10%, #586674);                        
+}
+
+.social-element.github:hover {  
+  background: linear-gradient(to right, rgb(33,33,33) 10%, #586674);
+}
+
+.social-element.instagram:hover {  
+  background: linear-gradient(to right, rgb(230,140,190) 10%, #586674); 
+}
+
+#social {
+  background-image: url('/img/line_2.svg');
+  background-size: auto;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  min-height: 21em;
+}
+
+#favorites {
+  background-image: url('/img/footer.svg');
+  background-size: cover;
+}
+
+.basis-75 {
+  flex-basis: 75%;
+}

@@ -1,10 +1,13 @@
 ---
-title: This is my first post.
-description: This is a post on My Blog about agile frameworks.
-date: 2018-05-01
+title: Gated Commits with Git
+description: Using Git hooks to run tests before each commit.
+date: 2018-08-26
 tags:
   - another-tag
 layout: layouts/post.njk
+cover: https://res.cloudinary.com/practicaldev/image/fetch/s--OL8tZY_T--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/k7kh73gxuasnrsig9wiu.png
+comments_count: 3
+positive_reactions_count: 15
 ---
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 

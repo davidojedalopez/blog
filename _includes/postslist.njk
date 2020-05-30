@@ -1,5 +1,15 @@
-<ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
-{% for post in postslist | reverse %}
+<div class="pt-4 pb-2 px-2">
+  <p>Most recent</p>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 sm:col-gap-6 row-gap-6 px-2">  
+  {% for post in postsList | reverse %}
+    {% include "postitem.njk" %}
+  {% endfor %}
+</div>
+
+{# <ol class="" style="counter-reset: start-from {{ (postsListCount or postsList.length) + 1 }}">
+{% for post in postsList | reverse %}
   <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
     <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
     <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
@@ -11,4 +21,4 @@
     {% endfor %}
   </li>
 {% endfor %}
-</ol>
+</ol> #}

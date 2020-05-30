@@ -1,0 +1,8 @@
+<div class="border rounded border-secondary bg-foreground pt-2 shadow-md">  
+  <h3 class="px-3 pb-3 truncate">{{ post.data.title }}</h3>
+  <p class="px-4">{{ post.data.description }}</p>
+  <time class="px-4" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>  
+  {% if post.data.cover %}
+    <img src="{{ post.data.cover}}" />
+  {% endif %}
+</div>

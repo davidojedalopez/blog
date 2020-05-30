@@ -5,37 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ renderData.title or title or metadata.title }}</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
-    <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
+    {# <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
+    <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}"> #}
+    <link rel="stylesheet" type="text/css" href="/assets/main.css" >
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
   </head>
-  <body>
-    <header>
-      <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+  <body class="leading-snug">
 
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-      <ul class="nav">
-      {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-      {%- endfor %}
-      </ul>
-    </header>
+      <header class="flex px-5 pt-4 bg-foreground">
 
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-      <div class="warning">
-        <ol>
-          <li>Edit the <code>_data/metadata.json</code> with your blog’s information.</li>
-          <li>(Optional) Edit <code>.eleventy.js</code> with your <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
-          <li>Delete this message from <code>_includes/layouts/base.njk</code>.</li>
-        </ol>
-        <p><em>This is an <a href="https://www.11ty.io/">Eleventy project</a> created from the <a href="https://github.com/11ty/eleventy-base-blog"><code>eleventy-base-blog</code> repo</a>.</em></p>
-      </div>
+        <div class="flex-1">
+          <span class="text-secondary">Hi, I'm</span>
+          <h1 class="transform translate-x-8 -rotate-6 text-primary leading-none font-black">
+            David<br> &nbsp;&nbsp;Ojeda</span>
+          </h1>
+        </div>
+        <h2 class="flex-1 text-secondary text-lg font-bold self-start text-center">Web enthusiast & fullstack developer</h2>        
 
-      {{ content | safe }}
-    </main>
+      </header>
+      
+      <main class="">
+        {{ content | safe }}
+      </main>
 
-    <footer></footer>
-
+      <footer class="flex justify-between items-center bg-foreground p-4">
+        <div class="basis-75">
+          <p>Copyleft</p>
+        </div>
+        
+        <div>
+          <p>Best place to reach me is on Twitter <a href="">@DavidOjedaL</a></p>
+        </div>
+        
+      </footer>
+    
     <!-- Current page: {{ page.url | url }} -->
+    <script src="/assets/main.js"></script>
   </body>
 </html>
