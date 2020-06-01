@@ -7,10 +7,10 @@
   {% endif %}
 </div> #}
 
-<li class="py-2 hover:bg-primary rounded px-2 group cursor-pointer">
+<li class="py-3 hover:bg-primary rounded px-3 group cursor-pointer">
   <a class="no-underline" href="{{ post.url | url }}">
     <h3 class="group-hover:text-black">{{ post.data.title }} <span class="text-xs">🔗</span> </h3>
-    <p class="pb-2">{{ post.data.description}}</p>
+    <p class="pb-1">{{ post.data.description}}</p>
     <div>
       <time class="text-sm text-secondary opacity-50"  datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>  
 

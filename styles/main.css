@@ -47,7 +47,7 @@ header {
 
 .shaped-outside {
   shape-outside: url(/img/nina_best.png);
-  width: 43%;
+  /* width: 43%; */
 }
 
 .social-element.twitter:hover {  
