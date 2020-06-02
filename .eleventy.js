@@ -67,6 +67,18 @@ module.exports = function(eleventyConfig) {
     ghostMode: false
   });
 
+  eleventyConfig.addShortcode("social", (name, description) => {
+    return `
+    <div class="pl-2 inline-flex mb-2 sm:mb-6 leading-tight sm:leading-snug cursor-pointer">
+      <img src="/img/${name}.svg" class="pr-2" width="40" />
+      <div class="social-element twitter rounded p-2 group">
+        <h3 class="text-xl capitalize">${name}<span class="text-sm pl-1">🔗</span></h3>
+        <p class="text-sm sm:text-base">${description}</p>
+      </div>
+    </div>
+    `
+  })
+
   return {
     templateFormats: [
       "md",

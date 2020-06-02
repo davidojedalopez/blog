@@ -30,8 +30,14 @@ a {
 }
 
 header {
-  background-image: url(/img/wave.svg);
+  /* background-image: url(/img/header.svg);
+  background-size: cover; */
+
+  background-image: url('/img/header.svg');
   background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+
   min-height: 9rem;
 }
 
@@ -41,8 +47,8 @@ header {
 }
 
 #blog {
-  background-image: url(/img/line.svg);
-  background-size: cover;
+  /* background-image: url(/img/line.svg);
+  background-size: cover; */
 }
 
 .shaped-outside {
@@ -71,18 +77,56 @@ header {
 }
 
 #social {
-  background-image: url('/img/line_2.svg');
-  background-size: auto;
+  min-height: 21em;  
+}
+
+.con {
+  background-image: url('/img/social.svg');
+  background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  min-height: 21em;
 }
 
 #favorites {
-  background-image: url('/img/footer.svg');
-  background-size: cover;
+  
 }
 
 .basis-75 {
   flex-basis: 75%;
 }
+
+footer {
+  background-image: url('/img/footer.svg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 10rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+    "books board"
+    "games posts"
+    "twitter music"
+  ;    
+}
+
+@media (min-width: 1024px) {
+  .grid-container {    
+    justify-items: end;
+    grid-template-areas: 
+      "music"
+      "books"
+      "posts"
+      "games"
+      "board"
+      "twitter"
+    ; 
+  }
+}
+
+.grid-self-end {
+  justify-self: end;
+}
+
