@@ -1,7 +1,7 @@
 @tailwind base;
 
 h1 {
-  @apply text-4xl;
+  @apply text-5xl;
 }
 
 h2 {
@@ -9,12 +9,12 @@ h2 {
 }
 
 h3 {
-  @apply text-xl text-tertiary;
+  @apply text-2xl text-tertiary;
 }
 
 p,
 a {
-  @apply text-base text-secondary;  
+  @apply text-lg text-secondary;  
   hyphens: auto;
 }
 
@@ -52,7 +52,7 @@ header {
 }
 
 .shaped-outside {
-  shape-outside: url(/img/nina_best.png);
+  /* shape-outside: url(/img/nina_square.png); */
   /* width: 43%; */
 }
 
@@ -73,7 +73,19 @@ header {
 }
 
 .social-element.instagram:hover {  
-  background: linear-gradient(to right, rgb(230,140,190) 10%, #586674); 
+  background: linear-gradient(to right, rgb(230,140,190) 10%, #586674);   
+}
+
+@screen sm {
+  .social-element.instagram:hover {  
+    background: linear-gradient(to bottom, rgb(230,140,190) 10%, #586674);
+  }
+}
+
+@screen md {
+  .social-element.instagram:hover {  
+    background: linear-gradient(to right, rgb(230,140,190) 10%, #586674);   
+  }  
 }
 
 #social {
@@ -119,8 +131,8 @@ footer {
       "music"
       "books"
       "posts"
-      "games"
       "board"
+      "games"
       "twitter"
     ; 
   }
@@ -128,5 +140,13 @@ footer {
 
 .grid-self-end {
   justify-self: end;
+}
+
+.text-shadow-bg {
+  text-shadow: 1px 1px 2px #2A3744;
+}
+
+.text-shadow-fg {
+  text-shadow: 1px 1px 2px #586674;
 }
 

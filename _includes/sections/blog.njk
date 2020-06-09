@@ -1,0 +1,12 @@
+<section id="blog" class="bg-background pt-10 px-5 sm:px-16 md:px-32 lg:px-56 xl:px-64">
+  <div class="relative z-10">    
+    <h2 class="transform rotate-6 pr-4 text-primary font-bold inline-block bg-background text-shadow-fg">Blog</h2>
+    <hr class="border-t-1 -pl-6 absolute w-full divider border-secondary">    
+  </div>                
+  
+  {% set postsList = collections.posts | head(-4) %}  
+  {% set postsListCount = collections.posts | length %}
+
+  {% include "postslist.njk" %}
+  
+</section>

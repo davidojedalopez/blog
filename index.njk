@@ -5,80 +5,14 @@ eleventyNavigation:
   order: 1
 ---
 
-<section id="blog" class="bg-background px-5 sm:px-16 md:px-32">
-  <div class="relative z-10">    
-    <h2 class="transform rotate-6 pr-4 text-primary font-bold inline-block bg-background">Blog</h2>
-    <hr class="border-t-1 -pl-6 absolute w-full divider border-secondary">    
-  </div>                
-  
-  {% set postsList = collections.posts | head(-4) %}  
-  {% set postsListCount = collections.posts | length %}
-
-  {% include "postslist.njk" %}
-  
-  <button class="mt-6 w-full text-3xl text-primary bg-background border-2 rounded border-primary p-1 font-bold shadow-lg focus:outline-none focus:shadow-outline hover:bg-foreground">Show all posts</button>
-</section>
+{% include "sections/blog.njk" %}
 
 <div class="flex flex-col lg:flex-row ">  
   <svg class="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2A3744" fill-opacity="1" d="M0,0L80,5.3C160,11,320,21,480,26.7C640,32,800,32,960,42.7C1120,53,1280,75,1360,85.3L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
 
-  <section id="social" class="lg:w-2/3 lg:pt-20 bg-foreground pt-12 px-5 sm:px-16 md:px-32">  
-      <div class="relative z-10 mb-4">
-        <h2 class="transform -rotate-6 pr-4 text-primary font-bold inline-block bg-foreground">Social</h2>
-        <hr class="border-t-1 -pl-6 absolute w-full divider border-secondary">    
-      </div>
-      
-      <img class="shaped-outside float-left w-40 sm:w-64 -ml-16 md:-ml-32" src="/img/nina_best.png" />    
+  {% include "sections/social.njk" %}
 
-      {% social "twitter", "I tweet about software 🌈" %}
-      <br>
-      {% social "DEV", "I write about software ✍🏼" %}
-      <br>
-      {% social "github", "I code 👨‍💻" %}      
-      <br>
-      {% social "linkedin", "I exist 😁" %}
-      <br>
-      {% social "instagram", "She barks 🐶" %}          
-      
-  </section>
+  {% include "sections/favorites.njk" %}
 
-  <section id="favorites" class="lg:w-1/3 lg:pt-20 bg-foreground py-8 ">
-    <div class="relative z-10 mb-4"> 
-      <h2 class="px-5 sm:px-16 md:px-5 transform rotate-6 pr-4 text-primary font-bold inline-block bg-foreground">Favorites</h2>
-      <hr class="border-t-1 -pl-6 absolute w-full divider border-secondary">    
-    </div>
-
-    <div class="grid-container gap-4">
-      <h3 style="width: max-content;grid-area: books" 
-          class="flex lg:flex-row-reverse p-3 rounded-r lg:rounded-l lg:rounded-r-none bg-tertiary text-black">
-        <div class="inline">Books</div>
-        &nbsp;
-        <span>📚</span>
-      </h3>
-      <h3 style="width: max-content;grid-area: board" 
-          class="p-3 rounded-l bg-tertiary text-black grid-self-end">          
-        🎲 Board games
-      </h3>
-      <h3 style="width: max-content;grid-area: games" 
-          class="flex lg:flex-row-reverse p-3 rounded-r lg:rounded-l lg:rounded-r-none bg-tertiary text-black">          
-        <div class="inline">Videogames</div>
-        &nbsp;
-        <span>🎮</span>          
-      </h3>
-      <h3 style="width: max-content;grid-area: posts" class="p-3 rounded-l bg-tertiary text-black grid-self-end">📝 Blog posts</h3>
-      <h3 style="width: max-content;grid-area: twitter" 
-          class="flex lg:flex-row-reverse p-3 rounded-r lg:rounded-l lg:rounded-r-none bg-tertiary text-black">
-          
-        <div class="inline">Twitter follows</div>
-        &nbsp;
-        <span>↪️</span>                    
-      </h3>
-      <h3 style="width: max-content;grid-area: music" 
-          class="p-3 rounded-l bg-tertiary text-black grid-self-end">
-          🎸 Music          
-      </h3>
-    </div>
-    
-  </section>  
 </div>
 

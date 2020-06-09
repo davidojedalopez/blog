@@ -2,13 +2,12 @@
   <p>Most recent</p>
 </div>
 
-<div class="flex">
+<div class="">
   <ul class="max-w-xl lg:max-w-2xl pl-1 list-none divide-opacity-50 divide-primary flex-auto">
     {% for post in postsList | reverse %}
       {% include "postitem.njk" %}
     {% endfor %}
   </ul>
 
-  {# <img src="/img/1f396.svg" class="flex-auto sm:hidden md:inline" width="10" height="10" />   #}
-  
+  <button class="max-w-xl lg:max-w-2xl mt-6 w-full text-3xl text-primary bg-background border-2 rounded border-primary p-1 font-bold shadow-lg focus:outline-none focus:shadow-outline hover:bg-foreground border-b-4">Show all posts</button>
 </div>
