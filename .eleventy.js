@@ -47,6 +47,8 @@ module.exports = function(eleventyConfig) {
     permalink: true,
     permalinkClass: "direct-link",
     permalinkSymbol: "#"
+  }).use( require("markdown-it-toc-done-right"), {
+    
   });
   eleventyConfig.setLibrary("md", markdownLibrary);
 

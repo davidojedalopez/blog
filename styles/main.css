@@ -1,5 +1,9 @@
 @tailwind base;
 
+body {
+  scroll-behavior: smooth;
+}
+
 h1 {
   @apply text-5xl;
 }
@@ -22,11 +26,58 @@ a {
   @apply text-primary underline;
 }
 
+p {
+  @apply mb-2;
+}
+
+
 @tailwind components;
 @tailwind utilities;
 
 .mirror-x {
   transform: scale(-1, 1);
+}
+
+.blog-post h1 {
+  @apply text-4xl;
+}
+
+.blog-post h2 {
+  @apply text-2xl mt-8 mb-4 text-tertiary;
+}
+
+.blog-post h3 {
+  @apply text-xl mt-8 mb-4 text-secondary;
+}
+
+.blog-post ul li {
+  @apply ml-4 text-secondary text-lg;  
+}
+
+.blog-post li {
+  display: block;
+  counter-increment: list-item; 
+  @apply text-tertiary;  
+}
+
+.blog-post ol {
+  counter-reset: list-item; 
+}
+
+.blog-post ul li::before {
+  content: "🐶 "
+}
+
+.blog-post li:before {
+  content: counters(list-item,'.') ' ';
+}
+
+.blog-post-content::first-letter {
+  /* @apply text-3xl text-tertiary; */
+}
+
+.table-of-contents * {
+  @apply text-sm py-1;  
 }
 
 header {

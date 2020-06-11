@@ -7,6 +7,7 @@ layout: layouts/post.njk
 cover: https://res.cloudinary.com/practicaldev/image/fetch/s--TM8JhiDk--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/6jddl1p3v9j2tl4ugjm6.png
 comments_count: 2
 positive_reactions_count: 63
+page_views_count: 1283
 ---
 Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
 

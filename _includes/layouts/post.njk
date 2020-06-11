@@ -2,8 +2,16 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<h1>{{ title }}</h1>
 
-{{ content | safe }}
+<article class="bg-background py-10 px-10 blog-post">
+  <h1 class="text-primary">{{ title }}</h1>
+  <time class="text-sm text-secondary opacity-50" datetime="{{ published_at | htmlDateString }}">{{ published_at | readableDate }}</time>
 
-<p><a href="{{ '/' | url }}">← Home</a></p>
+  <div class="pt-5 blog-post-content">
+    {{ content | safe }}
+  </div>
+
+</article>
+
+
+{# <p><a href="{{ '/' | url }}">← Home</a></p> #}

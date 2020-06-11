@@ -11,10 +11,11 @@
   <a class="no-underline" href="{{ post.url | url }}">
     <h3 class="group-hover:text-black">{{ post.data.title }} <span class="text-xs">🔗</span> </h3>
     <p class="pb-1">{{ post.data.description}}</p>
-    <div>
-      <time class="text-sm text-secondary opacity-50"  datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>  
-
-      {# Here will go the DEV.to comments and likes #}
-    </div>    
+    <div class="space-x-5">
+      <time class="text-sm text-secondary opacity-50"  datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>        
+      <span class="text-sm text-secondary opacity-75">🧡 {{ post.data.positive_reactions_count }}</span>
+      <span class="text-sm text-secondary opacity-75">💬 {{ post.data.comments_count }}</span>
+      <span class="text-sm text-secondary opacity-75">👀 {{ post.data.page_views_count }}</span>
+    </div>
   </a>
 </li>
