@@ -17,8 +17,8 @@ async function importPosts() {
   let cache = flatcache.load('dev-posts', path.resolve('./_datacache'));
   let key = getDateKey();
   let cachedData = cache.getKey(key);
-  
-  if(cachedData) {
+    
+  if(!cachedData) {
     let response = await fetch("https://dev.to/api/articles/me/published", {
       headers: {'api-key':process.env.DEV_API_KEY},
       method: 'get'
@@ -36,7 +36,7 @@ async function importPosts() {
         continue;
       }
       let post = matter.stringify(markdown, article);            
-      fs.writeFile(`posts/${article.published_at}_${article.title}.md`, post, (error) => {
+      fs.writeFile(`posts/${article.published_at}-${article.title}.md`, post, (error) => {
         if(error) {
           console.error(error);
           throw error;

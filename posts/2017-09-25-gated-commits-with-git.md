@@ -1,5 +1,5 @@
 ---
-title: Gated commits with Git
+title: gated-commits-with-git
 published: true
 description: Using Git hooks to run tests before each commit.
 cover_image: >-
@@ -8,7 +8,7 @@ tags: 'git, ci'
 canonical_url: 'https://dev.to/david_ojeda/gated-commits-with-git'
 type_of: article
 id: 8505
-published_at: 2017-09-25
+published_at: '2017-09-25'
 slug: gated-commits-with-git
 path: /david_ojeda/gated-commits-with-git
 url: 'https://dev.to/david_ojeda/gated-commits-with-git'
@@ -22,13 +22,6 @@ tag_list:
   - ci
 ---
 
-<details open class="text-tertiary no-outline pb-4">
-  <summary>Table of Contents</summary>
-  
-  [[toc]]
-
-</details>
-
 <p>A gated commit, also called a <strong>pre-tested</strong> commit, is an integration pattern in which a commit is not approved until a set of tests are ran against the code being commited. In other words, the commit does not go through if the test suite fails.</p>
 
 <p><strong>Why do you want this?</strong> It makes your application more resilient to change since now you are running a set or sub-set of your tests even before that code is available to anyone else.</p>
@@ -37,7 +30,7 @@ tag_list:
 
 ___
 
-## What do you need?
+<h2>What do you need?</h2>
 
 <ul>
     <li>Git</li>
@@ -45,11 +38,11 @@ ___
     <li>A test suite</li>
 </ul>
 
-## Starting off: Git Hooks
+<h3>Starting off: Git Hooks</h3>
 
 <p>We want our tests to run before a commit goes through. Git allows us to run custom commands just before that event happens thanks to Git hooks. I am not going to go into the details on how they work, but conveniently for us, there is a hook called <strong>pre-commit</strong>. This hook is executed just before the commit happens. Perfect spot for our test suite to run.</p>
 
-## Setting up a pre-commit hook
+<h3>Setting up a pre-commit hook</h3>
 
 <p>In your Git repo, there is a folder named .git in which the hooks are stored. If you have never modified any hook, your .git directory structure will look like this:</p>
 
@@ -69,7 +62,7 @@ ___
 
 <p>Independently of the language/framework you are using, your pre-commit hook needs to have the command to run your unit test suite. And, as long as the code inside the hook returns a <strong>zero exit code</strong>, the hook will allow the code to be commited. Otherwise, the commit will be rejected.</p>
 
-## Testing
+<h3>Testing</h3>
 
 <p>At this point you can go ahead and make a commit and see how our tests are run (and hopefully pass), thus opening the gate and letting the commit pass uncontested.</p>
 
@@ -79,15 +72,17 @@ ___
 
 ![Successful gated commit](https://thepracticaldev.s3.amazonaws.com/i/0oemd9h0kt5luq5ag79g.png)
 
-Success! 🥳
+<h4>
+    <strong>Success!</strong> 🥳
+</h4>
 
 <p>In the case that the test suite fails:</p>
 
 ![Unsuccessful gated commit](https://thepracticaldev.s3.amazonaws.com/i/4g9jrtcxh85z1av658vq.png)
 
-Sad face 🙁
+<h4>Sad face 🙁</h4>
 
-## Wrapping up
+<h3>Wrapping up</h3>
 
 <p>We have just created a Git pre-commit hook that contains specific commands to execute our app's unit test suite. <strong>Whenever a commit is issued</strong>, our tests run. If tests pass, we have a successful commit, if not, commit is rejected.</p>
 
