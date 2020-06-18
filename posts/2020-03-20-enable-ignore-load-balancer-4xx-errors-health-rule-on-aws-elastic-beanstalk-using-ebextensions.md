@@ -1,6 +1,6 @@
 ---
 title: >-
-  enable-ignore-load-balancer-4xx-errors-health-rule-on-aws-elastic-beanstalk-using-ebextensions
+  Enable 'ignore load balancer 4xx errors' health rule on AWS Elastic Beanstalk using ebextensions
 published: true
 description: >-
   Enable "Ignore load balancer 4xx errors" health rule on AWS Elastic Beanstalk
@@ -8,7 +8,7 @@ description: >-
 tags: 'aws, ElasticBeanstalk'
 type_of: article
 id: 284650
-published_at: '2020-03-20'
+published_at: 2020-03-20
 slug: >-
   enable-ignore-load-balancer-4xx-errors-health-rule-on-aws-elastic-beanstalk-using-ebextensions-4ac9
 path: >-
@@ -27,6 +27,17 @@ tag_list:
 canonical_url: >-
   https://dev.to/david_ojeda/enable-ignore-load-balancer-4xx-errors-health-rule-on-aws-elastic-beanstalk-using-ebextensions-4ac9
 ---
+
+<details open>
+  <summary>
+    Index
+  </summary>
+
+  [[toc]]
+
+</details>
+
+
 
 If you are an **Elastic Beanstalk (EB)** user, you are probably aware of a frequently [requested feature that was released on July 25, 2018](https://aws.amazon.com/releasenotes/release-aws-elastic-beanstalk-support-for-enhanced-health-rule-customization-on-july-25-2018/?tag=releasenotes%23keywords%23aws-elastic-beanstalk): To ignore application 4xx errors when determining your environment's health. It's was a new EB health rule that ignores 400-499 HTTP status codes when alerting if your environment instances are having trouble 🏥.  
   
@@ -48,7 +59,7 @@ In this post, I will show you, through a story, how to enable this feature using
 Follow along!  
   
 
-# Digging through the docs 🗂
+## Digging through the docs 🗂
 
   
 The first thing I do when trying to configure this new feature is: go to the [docs page where the almost identical feature is documented](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/health-enhanced-rules.html), that is, the ignore **application** 4xx errors. I found that is the same page as it was before, with no extra information about a load balancer health rule. Citing the docs:  
@@ -70,7 +81,7 @@ Without luck on this doc page, I proceeded to look somewhere else:
 
   
 
-# What next❓
+## What next❓
 
   
 I had already searched through a lot of docs without any progress. I posted the question on Twitter and StackOverflow, and I wasn't expecting any response soon. I thought about trying to guess the new field names and do a try-error session.  
@@ -105,19 +116,19 @@ If I were the software developer that created this feature, how would I call the
 But, should they be nested under "Application" or should it be another high-level field? By this time I was already hungry, so I went to cook and eat 👨🏻‍🍳🍲  
   
 
-# **Enlightenment**! 🔮
+## **Enlightenment**! 🔮
 
   
 **Taking a break helps**, you should consider it in your daily routine. Back to the topic...   
   
 I realized that even though I can't find a way to configure this feature through code, I can do it directly in the console. This would only be temporary because the environments re-create themselves on each deploy- any new environment would have this feature disabled.  
   
-And here is where I got an idea💡 What if I:  
+And here is where I got an idea 💡 What if I:  
   
 
-1.  Enable the feature on the console.
-2.  Save the environment configuration as an [EB Saved Configuration](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-configuration-savedconfig.html).
-3.  Retrieve it with the EB CLI to see how the field is called at an API level.
+1. Enable the feature on the console.
+2. Save the environment configuration as an [EB Saved Configuration](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/environment-configuration-savedconfig.html).
+3. Retrieve it with the EB CLI to see how the field is called at an API level.
 
   
 That's exactly what I did. Once the configuration was saved, I retrieved it:  
@@ -179,9 +190,7 @@ option_settings:
 }
 ```
 
-  
-
-# Wrap up 🔄
+## Wrap up 🔄
 
   
 I can't imagine how complex is to add a feature to a system as big as AWS while maintaining all the docs updated. I don't blame them.  

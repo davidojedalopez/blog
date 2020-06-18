@@ -30,6 +30,9 @@ p {
   @apply mb-2;
 }
 
+pre {
+  @apply pl-4 !important; /* To override Prism theme */
+}
 
 @tailwind components;
 @tailwind utilities;
@@ -50,34 +53,62 @@ p {
   @apply text-xl mt-8 mb-4 text-secondary;
 }
 
-.blog-post ul li {
-  @apply ml-4 text-secondary text-lg;  
+.blog-post ul li, 
+.blog-post ol li {
+  @apply ml-4 text-secondary text-lg list-inside;  
 }
 
 .blog-post li {
+  @apply mb-2;
+}
+
+.blog-post ol {
+  list-style: decimal;
+}
+
+/* TOC styles */
+.table-of-contents li {
   display: block;
   counter-increment: list-item; 
   @apply text-tertiary;  
 }
 
-.blog-post ol {
+.table-of-contents ol {
   counter-reset: list-item; 
+}
+
+.table-of-contents li:before {
+  content: counters(list-item,'.') ' ';
+  @apply text-tertiary ;
+}
+/* End TOC styles */
+
+.blog-post ul {
+  @apply mb-4;
+}
+
+.blog-post ol {
+  @apply mb-4;
 }
 
 .blog-post ul li::before {
   content: "🐶 "
 }
 
-.blog-post li:before {
-  content: counters(list-item,'.') ' ';
-}
-
-.blog-post-content::first-letter {
-  /* @apply text-3xl text-tertiary; */
+.blog-post-content > p:first-of-type::first-letter {
+  @apply text-4xl text-tertiary;
 }
 
 .table-of-contents * {
-  @apply text-sm py-1;  
+  @apply py-1 ml-1 text-tertiary;  
+}
+
+.blog-post details {
+  @apply py-4;
+}
+
+.blog-post summary {
+  @apply outline-none text-tertiary cursor-pointer;
 }
 
 header {

@@ -3,11 +3,11 @@ layout: layouts/base.njk
 templateClass: tmpl-post
 ---
 
-<article class="bg-background py-10 px-10 blog-post">
+<article class="bg-background py-10 px-6 sm:px-10 blog-post max-w-3xl">
   <h1 class="text-primary">{{ title }}</h1>
   <time class="text-sm text-secondary opacity-50" datetime="{{ published_at | htmlDateString }}">{{ published_at | readableDate }}</time>
 
-  <div class="pt-5 blog-post-content">
+  <div class="pt-5 blog-post-content leading-relaxed">
     {{ content | safe }}
   </div>
 
