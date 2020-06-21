@@ -1,5 +1,5 @@
 ---
-title: 25-days-of-serverless---day-02
+title: 25 Days of serverless - Day 2
 published: true
 description: Solution for the second challenge of 25 Days of Serverless
 tags: '25 Days Of Serverless, serverless, aws'
@@ -8,7 +8,7 @@ cover_image: >-
   https://res.cloudinary.com/practicaldev/image/fetch/s--2JUu6Mqq--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/mmifllva7vcih9hqkref.jpeg
 type_of: article
 id: 214991
-published_at: '2019-12-04'
+published_at: 2019-12-04
 slug: 25-days-of-serverless-day-02-i2k
 path: /david_ojeda/25-days-of-serverless-day-02-i2k
 url: 'https://dev.to/david_ojeda/25-days-of-serverless-day-02-i2k'
@@ -24,13 +24,22 @@ tag_list:
 canonical_url: 'https://dev.to/david_ojeda/25-days-of-serverless-day-02-i2k'
 ---
 
+<details open>
+  <summary>
+    Index
+  </summary>
+
+  [[toc]]
+
+</details>
+
 *Cover image taken from [Microsoft's 25 Days of Serverless repo](https://github.com/microsoft/25-days-of-serverless/blob/master/week-1/challenge-2/README.md)*
 
----
+***
 
 It's time for the second post of this series, hence the solution to the second challenge of the 25 Days of Serverless! Let's get to it 💪🏼.
 
-# Challenge 2: Task Scheduler ☕️
+## Challenge 2: Task Scheduler ☕️
 
 Here is the [description from their GitHub repo](https://github.com/microsoft/25-days-of-serverless/blob/master/week-1/challenge-2/README.md):
 
@@ -45,6 +54,8 @@ Here is the [description from their GitHub repo](https://github.com/microsoft/25
 > It takes Lucy 25 minutes to make a large pot of coffee that will serve everyone, and about four minutes to deliver two cups of coffee (remember that she only has two hands to deliver them!). As mentioned, the candles will need to be relit every ten minutes.
 
 > Create a task scheduler that will tell Lucy exactly when she should relight candles, pour coffee into cups, and deliver batches of coffee. How you want to notify Lucy is up to you: maybe you can send her an SMS via Twilio, or build a webapp that uses WebSockets and browser notifications?
+
+
 
 Then there is a section with tips on when to notify what:
 
@@ -64,7 +75,7 @@ Then there is a section with tips on when to notify what:
 
 > 8:49 AM - return to kitchen, take a break!
 
---- 
+*** 
 
 ## My solution
 
@@ -164,7 +175,7 @@ Next, the `ManagedPolicyArns` is a list of policies already managed by AWS that 
 
 Finally, the `Policies` section is a custom policy defined by us that allows our role to publish text messages using SNS.
 
-### The Lamda function code
+### The Lambda function code
 
 Now the actual code solution for the challenge 👀 We start by getting the minute when the function was called. We can safely assume that it's running on one of the specified minutes since that's what we defined in the cron schedule:
 
@@ -238,6 +249,6 @@ Now that it's my second time using the AWS SAM CLI, I could move faster and get 
 
 I loved how you can [create events with the CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-local-generate-event.html) and [use them to locally test your Lamda functions] (https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-local-invoke.html). Definitely helps a lot since you don't have to deploy everything to test your changes.
 
----
+***
 
 Thanks a lot for reading me! 💚

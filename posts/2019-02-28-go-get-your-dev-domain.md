@@ -1,11 +1,11 @@
 ---
-title: go-get-your-dev-domain
+title: Go get your .dev domain
 published: true
 description: .dev Top Level Domain (TLD) is now generally available
 tags: 'dev, domain, portfolio'
 type_of: article
 id: 87288
-published_at: '2019-02-28'
+published_at: 2019-02-28
 slug: go-get-your-dev-domain-5hef
 path: /david_ojeda/go-get-your-dev-domain-5hef
 url: 'https://dev.to/david_ojeda/go-get-your-dev-domain-5hef'

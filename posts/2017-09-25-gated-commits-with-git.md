@@ -1,5 +1,5 @@
 ---
-title: gated-commits-with-git
+title: Gated commits with Git
 published: true
 description: Using Git hooks to run tests before each commit.
 cover_image: >-
@@ -8,7 +8,7 @@ tags: 'git, ci'
 canonical_url: 'https://dev.to/david_ojeda/gated-commits-with-git'
 type_of: article
 id: 8505
-published_at: '2017-09-25'
+published_at: 2017-09-25
 slug: gated-commits-with-git
 path: /david_ojeda/gated-commits-with-git
 url: 'https://dev.to/david_ojeda/gated-commits-with-git'

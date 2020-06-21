@@ -1,7 +1,7 @@
 ---
 type_of: article
 id: 293929
-title: blog-post-writing-app-demo
+title: Blog post-writing app demo
 description: "Hello Devs \U0001F44B\U0001F3FC  I want to showcase an app I've been working on for the past few weeks. It aims to solv..."
 published: true
 published_at: 2020-03-28
@@ -32,7 +32,7 @@ I made a video tour of my work so far; bare with me please since I'm terrible at
 
 [youtube](NICjX4w85jg)
 
-# A brief summary:
+## A brief summary:
 
 A **blog post writing app** to **write your content once**, and **publish it anywhere** you want.
 

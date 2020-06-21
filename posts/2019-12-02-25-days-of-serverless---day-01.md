@@ -1,5 +1,5 @@
 ---
-title: 25-days-of-serverless---day-01
+title: 25 Days of serverless - Day 1
 published: true
 description: Solution for the first challenge of 25 Days of Serverless
 tags: '25 Days Of Serverless, serverless, aws'
@@ -24,9 +24,20 @@ tag_list:
 canonical_url: 'https://dev.to/david_ojeda/25-days-of-serverless-day-01-3g4b'
 ---
 
+<details open>
+  <summary>
+    Index
+  </summary>
+
+  [[toc]]
+
+</details>
+
 *Cover image taken from [Microsoft's 25 Days of Serverless repo](https://github.com/microsoft/25-days-of-serverless/blob/master/week-1/challenge-1/README.md)*
 
----
+***
+
+
 
 Yesterday while scrolling through Twitter I found an interesting opportunity to learn about the current state of serverless technologies, it's called **[25 Days of Serverless](https://25daysofserverless.com/)**. 
 
@@ -36,7 +47,7 @@ I decided to give it a try, but using AWS as the cloud provider since it's what 
 
 So fasten your seatbelts since I'll be posting my solutions for the next 25 days 🤘🏼
 
-# Challenge 1: A Basic Function
+## Challenge 1: A Basic Function
 
 Here is the description from their GitHub repo:
 

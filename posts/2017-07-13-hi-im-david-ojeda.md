@@ -1,11 +1,11 @@
 ---
-title: hi-im-david-ojeda
+title: Hi I'm David Ojeda
 published: true
 description: My introduction post
 tags: introductions
 type_of: article
 id: 5622
-published_at: '2017-07-13'
+published_at: 2017-07-13
 slug: hi-im-david-ojeda
 path: /david_ojeda/hi-im-david-ojeda
 url: 'https://dev.to/david_ojeda/hi-im-david-ojeda'

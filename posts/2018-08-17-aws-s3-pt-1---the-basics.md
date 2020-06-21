@@ -1,5 +1,5 @@
 ---
-title: aws-s3-pt-1---the-basics
+title: AWS S3 pt. 1 - The basics
 published: true
 description: Basic concepts of AWS Simple Storage Service (S3)
 tags:
@@ -8,7 +8,7 @@ tags:
 canonical_url: 'https://dev.to/david_ojeda/aws-s3-pt-1---the-basics-55bp'
 type_of: article
 id: 42261
-published_at: '2018-08-17'
+published_at: 2018-08-17
 slug: aws-s3-pt-1---the-basics-55bp
 path: /david_ojeda/aws-s3-pt-1---the-basics-55bp
 url: 'https://dev.to/david_ojeda/aws-s3-pt-1---the-basics-55bp'
@@ -23,18 +23,26 @@ tag_list:
   - s3
 ---
 
+<details open>
+  <summary>
+    Index
+  </summary>
+
+  [[toc]]
+
+</details>
+
 *Part one of this series covers S3 basics and a general use case.*
 
----
+***
 
-
-# What's AWS S3?
+## What's AWS S3?
 AWS **S**imple **S**torage **S**ervice, called **S3**, is an object storage solution to reliably store and retrieve any amount of data.
 
-# What can it do?
+## What can it do?
 It can store your files, build packages, reports, images, and any type of data you can think about for later retrieval with a guaranteed 99.999999999% durability. Also, it can restrict access to specific data with very flexible rules.
 
-# Why use it?
+## Why use it?
 S3 is extremely reliable and flexible. You want to use it if you at some point need to store and retrieve:
 - Huge amounts of data for analytics
 - Files for customers to access
@@ -43,25 +51,26 @@ S3 is extremely reliable and flexible. You want to use it if you at some point n
 
 Also, it has tons of integrations with other services within AWS.
 
-# Some basic S3 concepts
-- ## Buckets
-  A Bucket is like a top level directory in Linux in the sense that it is a node in level one. A bucket is then the "directory" that stores a group of objects or more directories (with no quotes since these are proper directories now). More clarification below.
+## Some basic S3 concepts
 
-- ## Objects
-  Objects are the files itself. A bucket can contain many different objects.
+### Buckets
+A Bucket is like a top level directory in Linux in the sense that it is a node in level one. A bucket is then the "directory" that stores a group of objects or more directories (with no quotes since these are proper directories now). More clarification below.
+
+### Objects
+Objects are the files itself. A bucket can contain many different objects.
 
 Bucket and objects example:
 
 ![S3 URL explained](https://thepracticaldev.s3.amazonaws.com/i/wx0mkto03h9zi2vescrv.png)
 
-- ## Bucket Policies
-  S3 bucket policies are the set of rules that explicitly define who has or not access to your bucket and to objects within that bucket.
+### Bucket Policies
+S3 bucket policies are the set of rules that explicitly define who has or not access to your bucket and to objects within that bucket.
 
-- ## ACLs
-  **A**ccess **C**ontrol **L**ists is yet another way to define access to your buckets and objects. However, this is a legacy access control mechanism, so it's best to focus on bucket policies. The cases in which ACLs are needed are, for example, when a bucket policy grows too large- they are limited to 20 kb in size. Or when you want to restrict access to specific objects within a bucket.
+### ACLs
+**A**ccess **C**ontrol **L**ists is yet another way to define access to your buckets and objects. However, this is a legacy access control mechanism, so it's best to focus on bucket policies. The cases in which ACLs are needed are, for example, when a bucket policy grows too large- they are limited to 20 kb in size. Or when you want to restrict access to specific objects within a bucket.
 
-- ## Lifecycle Rules
-  Lifecycle rules are actions that S3 can apply to a group of objects depending on how much time they have been stored. For instance, you can delete objects that have been on your buckets for more than 90 days. 
+### Lifecycle Rules
+Lifecycle rules are actions that S3 can apply to a group of objects depending on how much time they have been stored. For instance, you can delete objects that have been on your buckets for more than 90 days. 
 
 Apart from these concepts, one of the most important things to know about S3 is its **consistency model**.
 
@@ -84,18 +93,15 @@ You also get eventual consistency when you delete an existing object. That is, y
 
 This is because changes made to your S3 buckets need some time to propagate and replicate through AWS servers.
 
-# Some S3 use cases
+## Some S3 use cases
 
 - Store AWS Load Balancer logs for further analysis
 - Host static websites
 - Store assets for a static web page
 - Store exported data for your customers
 
-#Wrap up
+## Wrap up
 
 This covers the very basics of S3 which are enough to get started with the service. S3 is one of the most used services of AWS due to its reliability, durability and integration with many other services inside and outside AWS.
 
-
 **Thanks for reading me!** ❤️
-
----

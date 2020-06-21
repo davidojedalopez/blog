@@ -1,5 +1,5 @@
 ---
-title: groovy-delegation-strategy-for-query-re-use-in-grails
+title: Groovy delegation strategy for query re-use in Grails
 published: true
 description: One way to re-use criteria queries using Groovy closures' delegates in Grails
 tags: 'groovy, grails, hibernate'
@@ -7,7 +7,7 @@ canonical_url: >-
   https://dev.to/handy/groovy-delegation-strategy-for-query-re-use-in-grails-24ha
 type_of: article
 id: 48323
-published_at: '2019-03-12'
+published_at: 2019-03-12
 slug: groovy-delegation-strategy-for-query-re-use-in-grails-24ha
 path: /handy/groovy-delegation-strategy-for-query-re-use-in-grails-24ha
 url: >-
@@ -23,6 +23,15 @@ tag_list:
   - grails
   - hibernate
 ---
+
+<details open>
+  <summary>
+    Index
+  </summary>
+
+  [[toc]]
+
+</details>
 
 ## The problem
 
@@ -279,7 +288,6 @@ Finally, we're going to use this service from our controller to return the value
 
 The list view now has everything it needs to render each result and paginate it!
 
-
 ## Summary
 
 The final flow is this:
@@ -294,10 +302,8 @@ The **delegate is our Domain**, and it has a createCriteria method, so it uses i
 
 Now we have two closures that are being used by multiple Domains to get similar data from the database. 
 
----
+***
 
 This is only one of many powerful use cases of closure delegates in Groovy. Have you used this feature before? If so, let me know in the comments!
-
-
 
 **Thanks for reading me ❤️**

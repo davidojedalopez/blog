@@ -95,6 +95,10 @@ pre {
   content: "🐶 "
 }
 
+.blog-post ul li li::before {
+  content: "🐕 "
+}
+
 .blog-post-content > p:first-of-type::first-letter {
   @apply text-4xl text-tertiary;
 }
@@ -109,6 +113,14 @@ pre {
 
 .blog-post summary {
   @apply outline-none text-tertiary cursor-pointer;
+}
+
+.blog-post blockquote {
+  @apply ml-4 bg-tertiary rounded-sm p-4;
+}
+
+.blog-post blockquote p {
+  @apply text-background;
 }
 
 header {

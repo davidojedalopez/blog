@@ -1,5 +1,5 @@
 ---
-title: road-to-aws-certification
+title: Road to AWS certification
 published: true
 description: Entry post for series of posts about AWS
 tags:
@@ -7,7 +7,7 @@ tags:
 canonical_url: 'https://dev.to/david_ojeda/road-to-aws-certification-2438'
 type_of: article
 id: 41252
-published_at: '2018-07-30'
+published_at: 2018-07-30
 slug: road-to-aws-certification-2438
 path: /david_ojeda/road-to-aws-certification-2438
 url: 'https://dev.to/david_ojeda/road-to-aws-certification-2438'

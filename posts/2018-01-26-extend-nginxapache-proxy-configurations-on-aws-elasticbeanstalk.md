@@ -1,5 +1,5 @@
 ---
-title: extend-nginxapache-proxy-configurations-on-aws-elasticbeanstalk
+title: Extend nginx or Apache proxy configurations on AWS ElasticBeanstalk
 published: true
 description: >-
   Use .ebextensions feature of AWS ElasticBeanstalk to define custom
@@ -11,7 +11,7 @@ canonical_url: >-
   https://dev.to/david_ojeda/extend-nginxapache-proxy-configurations-on-aws-elasticbeanstalk-3mjg
 type_of: article
 id: 17968
-published_at: '2018-01-26'
+published_at: 2018-01-26
 slug: extend-nginxapache-proxy-configurations-on-aws-elasticbeanstalk-3mjg
 path: >-
   /david_ojeda/extend-nginxapache-proxy-configurations-on-aws-elasticbeanstalk-3mjg
@@ -28,17 +28,26 @@ tag_list:
   - proxy
 ---
 
+<details open>
+  <summary>
+    Index
+  </summary>
+
+  [[toc]]
+
+</details>
+
 AWS ElasticBeanstalk applications use either an nginx or Apache proxy to relay requests. Using the .ebextensions feature of ElasticBeanstalk we can extend the configuration of these proxies. If you don't know how .ebextensions work you can read more <a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/ebextensions.html">here.</a>
 
 I'm going to extend the default nginx proxy configurations using .ebextensions. The same procedure can be used to extend an Apache proxy.
 
-# Create a .conf file
+## Create a .conf file
 
 First we need to create a .conf file with the desired directives. A list of nginx directives can be found <a href="http://nginx.org/en/docs/dirindex.html"> here.</a> My conf file- named proxy.conf -increases some timeouts of the proxy:
 
 [gist](https://gist.github.com/davidojedalopez/b3735a658fbd645b38a13405f9eae8fa)
 
-# Create nginx conf.d directory
+## Create nginx conf.d directory
 
 Now we need the directory where our configuration file will be. Under .ebextensions, create a directory named 'nginx', and inside it another named 'conf.d'. Then add the file you just created. Your dir structure should look like this:
 
@@ -71,6 +80,6 @@ Same can be done for an Apache proxy. The difference is on the directory structu
         - conf
             - proxy.conf
 
-# Wrap-up
+## Wrap-up
 
 Using .ebextensions is by far the simplest method to add custom configurations to your nginx or Apache proxy. Create as many configuration files as you need and add them to the corresponding directory under .ebextensions and you are done.

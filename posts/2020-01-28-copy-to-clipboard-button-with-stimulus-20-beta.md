@@ -1,12 +1,12 @@
 ---
 type_of: article
 id: 248182
-title: copy-to-clipboard-button-with-stimulus-20-beta
+title: Copy to clipboard with Stimulus 2.0 beta
 description: >-
-  Stimulus is a JavaScript framework developed by a team at Basecamp, and it
-  aims to augment your exist...
+  Stimulus is a JavaScript framework developed by Basecamp, and it
+  aims to augment your existing HTML.
 published: true
-published_at: '2020-01-28'
+published_at: 2020-01-28
 slug: copy-to-clipboard-button-with-stimulus-2-0-beta-1nll
 path: /david_ojeda/copy-to-clipboard-button-with-stimulus-2-0-beta-1nll
 url: >-
@@ -25,6 +25,15 @@ canonical_url: >-
   https://dev.to/david_ojeda/copy-to-clipboard-button-with-stimulus-2-0-beta-1nll
 ---
 
+<details open>
+  <summary>
+    Index
+  </summary>
+
+  [[toc]]
+
+</details>
+
 [**Stimulus**](https://stimulusjs.org/handbook/introduction) is a JavaScript framework developed by a team at [Basecamp](https://basecamp.com/), and it aims to augment your existing HTML so things work without too much "connecting" code.
 
 Contrary to other frameworks, Stimulus doesn't take over your front-end, so you can add it without too much hassle to your already running app.  
@@ -37,7 +46,7 @@ Right now we are **replicating** that functionality and adding a couple more thi
 
 It **includes new APIs that will be released with version 2.0** of the framework, so they are not yet available with the current stable production release.
 
-# What are we building?
+## What are we building?
 
 A one-time password "copy to clipboard" button what wraps the DOM Clipboard API.
 
@@ -45,7 +54,7 @@ You can access the final working version on [Glitch](https://glitch.com/edit/#!/
 
 [glitch](trapezoidal-seer)
 
-# Starting off
+## Starting off
 
 First, we are creating our base HTML where the one-time password will be and the actual button to copy it:
 
@@ -67,7 +76,7 @@ First, we are creating our base HTML where the one-time password will be and the
 
 This doesn't do anything by itself; we need to add our Stimulus controller.
 
-# The controller definition
+## The controller definition
 
 In Stimulus, **a controller is a JavaScript object that automatically connects to DOM elements that have certain identifiers**.
 
@@ -94,7 +103,7 @@ Let's define our clipboard controller. The main thing it needs to do? Grab the t
 
 Now, this is a valid controller that doesn't do anything because it's not connected to any DOM element yet.
 
-# Connecting the controller
+## Connecting the controller
 
 Adding a `data-controller` attribute to our `div` will enable the connection:
 
@@ -133,7 +142,7 @@ Also, we need the button to actually do something. We can link the "Copy to clip
 
 Our controller is now automatically connected to the DOM, and clicking the copy button will invoke the `copy` function; let's proceed to write it.
 
-# The copy function
+## The copy function
 
 This function is essentially a **wrapper of the DOM Clipboard API**. The logic goes like this:
 
@@ -152,13 +161,13 @@ We take the `source` target we defined earlier, our text input that is, select i
 
 At this point, **the functionality is practically done!** You can press the button and the one-time password is now available for you on your clipboard.
 
-# Moving further
+## Moving further
 
 The copy button works now, but we can go further. **What if the browser doesn't support the Clipboard API or JavaScript is disabled?**
 
 If that's the case, we are going to hide the copy button entirely.
 
-# Checking API availability
+## Checking API availability
 
 We can check if the `copy` command is available to us by doing this:
 
@@ -217,7 +226,7 @@ connect() {
 
 **There is a new, better way to achieve it.**
 
-# Classes API
+## Classes API
 
 Now, **CSS classes can be actual properties of the controller**. To do so, we need to add some identifiers to our HTML and add a new array to our controller:
 
@@ -252,7 +261,7 @@ The clipboard real-life example from Stimulus' handbook ends here. Now, to show 
 - A refresh interval for the one-time password. This will generate a new password every 2.5 seconds
 - A data attribute to keep track of how many times the password has been generated
 
-# Values API
+## Values API
 
 This, along with the *Classes API*, is one of the new additions to Stimulus. Before this API you would need to add arbitrary values to your controller with the Data Map API, that is, adding `data-[identifier]-[variable-name]` to your DOM element, and then parsing that value in your controller. 
 
@@ -289,7 +298,7 @@ application.register("clipboard", class extends Stimulus.Controller {
 
 Moving forward, let's write the one-time password refresh.
 
-# Implementing password generation
+## Implementing password generation
 
 We're going to define a new function to create a new random password. [I grabbed this random UUID generator snippet from the internet](https://www.arungudelli.com/tutorial/javascript/how-to-create-uuid-guid-in-javascript-with-examples/):
 
@@ -431,7 +440,7 @@ These callbacks are called whenever a value changes, and also once when the cont
 We use it to log a message each time the password has been refreshed three times, but they can help with state management in a more complex use case. 
 
 
-# Wrapping up
+## Wrapping up
 
 I've created multiple Stimulus controllers for my daily job, and I must say that I always end up pleased with the results. Stimulus encourages you to keep related code together and, combined with the additional HTML markup required, ends up making your code much more readable.
 

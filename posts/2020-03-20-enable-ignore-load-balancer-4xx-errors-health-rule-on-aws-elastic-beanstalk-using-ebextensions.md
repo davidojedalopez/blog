@@ -1,6 +1,6 @@
 ---
 title: >-
-  Enable 'ignore load balancer 4xx errors' health rule on AWS Elastic Beanstalk using ebextensions
+  Enable "ignore load balancer 4xx errors" health rule on AWS Elastic Beanstalk using ebextensions
 published: true
 description: >-
   Enable "Ignore load balancer 4xx errors" health rule on AWS Elastic Beanstalk
