@@ -1,132 +1,9 @@
-@tailwind base;
-
-body {
-  scroll-behavior: smooth;
-}
-
-h1 {
-  @apply text-5xl;
-}
-
-h2 {
-  @apply text-3xl;
-}
-
-h3 {
-  @apply text-2xl text-tertiary;
-}
-
-p,
-a {
-  @apply text-lg text-secondary;  
-  hyphens: auto;
-}
-
-a {
-  @apply text-primary underline;
-}
-
-p {
-  @apply mb-2;
-}
-
-pre {
-  @apply pl-4 !important; /* To override Prism theme */
-}
-
-@tailwind components;
-@tailwind utilities;
 
 .mirror-x {
   transform: scale(-1, 1);
 }
 
-.blog-post h1 {
-  @apply text-4xl;
-}
-
-.blog-post h2 {
-  @apply text-2xl mt-8 mb-4 text-tertiary;
-}
-
-.blog-post h3 {
-  @apply text-xl mt-8 mb-4 text-secondary;
-}
-
-.blog-post ul li, 
-.blog-post ol li {
-  @apply ml-4 text-secondary text-lg list-inside;  
-}
-
-.blog-post li {
-  @apply mb-2;
-}
-
-.blog-post ol {
-  list-style: decimal;
-}
-
-/* TOC styles */
-.table-of-contents li {
-  display: block;
-  counter-increment: list-item; 
-  @apply text-tertiary;  
-}
-
-.table-of-contents ol {
-  counter-reset: list-item; 
-}
-
-.table-of-contents li:before {
-  content: counters(list-item,'.') ' ';
-  @apply text-tertiary ;
-}
-/* End TOC styles */
-
-.blog-post ul {
-  @apply mb-4;
-}
-
-.blog-post ol {
-  @apply mb-4;
-}
-
-.blog-post ul li::before {
-  content: "🐶 "
-}
-
-.blog-post ul li li::before {
-  content: "🐕 "
-}
-
-.blog-post-content > p:first-of-type::first-letter {
-  @apply text-4xl text-tertiary;
-}
-
-.table-of-contents * {
-  @apply py-1 ml-1 text-tertiary;  
-}
-
-.blog-post details {
-  @apply py-4;
-}
-
-.blog-post summary {
-  @apply outline-none text-tertiary cursor-pointer;
-}
-
-.blog-post blockquote {
-  @apply ml-4 bg-tertiary rounded-sm p-4;
-}
-
-.blog-post blockquote p {
-  @apply text-background;
-}
-
-header {
-  /* background-image: url(/img/header.svg);
-  background-size: cover; */
-
+header {  
   background-image: url('/img/header.svg');
   background-size: cover;
   background-position: bottom;
@@ -138,16 +15,6 @@ header {
 .divider {
   top: 50%;
   z-index: -1;
-}
-
-#blog {
-  /* background-image: url(/img/line.svg);
-  background-size: cover; */
-}
-
-.shaped-outside {
-  /* shape-outside: url(/img/nina_square.png); */
-  /* width: 43%; */
 }
 
 .social-element.twitter:hover {  
