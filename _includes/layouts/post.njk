@@ -7,7 +7,7 @@ templateClass: tmpl-post
   <h1 class="text-primary">{{ title }}</h1>
   <time class="text-sm text-secondary opacity-50" datetime="{{ published_at | htmlDateString }}">{{ published_at | readableDate }}</time>
 
-  <div class="pt-5 blog-post-content leading-relaxed">
+  <div class="pt-5 blog-post-content leading-relaxed">  
     {{ content | safe }}
   </div>
 

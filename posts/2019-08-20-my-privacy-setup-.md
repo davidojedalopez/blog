@@ -31,6 +31,8 @@ canonical_url: 'https://dev.to/david_ojeda/my-privacy-setup-3k49'
 
 </details>
 
+***
+
 **One of the most precious things in this modern world is data, our own personal data.**
 
 ![Knowledge is power Game Of Thrones GIF](https://media.giphy.com/media/10fAvEln0lB8Lm/giphy.gif)

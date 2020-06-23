@@ -3,11 +3,15 @@
 }
 
 .blog-post h2 {
-  @apply text-2xl mt-8 mb-4 text-tertiary;
+  @apply text-2xl mt-8 mb-4 text-primary;
 }
 
 .blog-post h3 {
   @apply text-xl mt-8 mb-4 text-secondary;
+}
+
+.blog-post p {
+  @apply mb-6;
 }
 
 .blog-post li {
@@ -15,8 +19,7 @@
 }
 
 .blog-post ol {
-  list-style: decimal;
-  @apply mb-4;
+  list-style: decimal;  
 }
 
 .blog-post ul {
@@ -54,11 +57,11 @@
 /* End TOC styles */
 
 .blog-post-content > p:first-of-type::first-letter {
-  @apply text-4xl text-tertiary;
+  @apply text-4xl text-tertiary pr-1;
 }
 
 .table-of-contents * {
-  @apply py-1 ml-1 text-tertiary;  
+  @apply ml-1 text-tertiary;  
 }
 
 .blog-post details {
@@ -75,4 +78,12 @@
 
 .blog-post blockquote p {
   @apply text-background;
+}
+
+.blog-post strong {
+  @apply text-tertiary;
+}
+
+.blog-post hr {
+  @apply my-4 border-primary;
 }
