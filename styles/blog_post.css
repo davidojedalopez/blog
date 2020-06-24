@@ -1,8 +1,13 @@
 .blog-post {
-  @apply pl-8;
-  padding-right: 24rem;
+  @apply pl-8 pr-8;
   background: rgb(88,102,116);
   background: linear-gradient(0deg, rgba(88,102,116,1) 0%, rgba(42,55,68,1) 100%);
+}
+
+@screen lg {
+  .blog-post {
+    padding-right: 50vw;
+  }
 }
 
 .blog-post h1 {
