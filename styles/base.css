@@ -16,18 +16,14 @@ h3 {
   @apply text-2xl text-tertiary;
 }
 
-p,
-a {
-  @apply text-lg text-secondary;  
-  hyphens: auto;
-}
-
 a {
   @apply text-primary underline;
 }
 
 p {
   @apply mb-2;
+  @apply text-lg text-secondary;  
+  hyphens: auto;
 }
 
 pre {
