@@ -53,13 +53,6 @@ header {
   min-height: 21em;  
 }
 
-.con {
-  background-image: url('/img/social.svg');
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
-}
-
 #favorites {
   
 }
