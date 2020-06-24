@@ -3,7 +3,11 @@ layout: layouts/base.njk
 templateClass: tmpl-post
 ---
 
-{# <article class="bg-background py-10 px-6 sm:px-10 blog-post max-w-3xl"> #}
+<div class="pl-4 pt-8">
+  <a class="bg-background p-2 rounded-md border-2 border-tertiary shadow-lg focus:shadow-outline hover:bg-foreground border-b-4 no-underline text-tertiary" href="{{ '/posts' | url }}">⬅️ Back to all posts</a>
+
+</div>
+
 <article class="bg-background py-10 blog-post">
   <h1 class="text-primary">{{ title }}</h1>
   <time class="text-sm text-secondary opacity-50" datetime="{{ published_at | htmlDateString }}">{{ published_at | readableDate }}</time>
@@ -13,6 +17,9 @@ templateClass: tmpl-post
   </div>
 </article>
 
+<div class="p-4 bg-foreground">  
+  <a class="bg-foreground p-2 rounded-md border-2 border-tertiary shadow-lg focus:shadow-outline hover:bg-background border-b-4 no-underline text-tertiary" href="{{ '/posts' | url }}">⬅️ Back to all posts</a>
+</div>
 {# Add sharing options, comments, previous posts #}
 
 
