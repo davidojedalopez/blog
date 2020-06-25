@@ -17,6 +17,11 @@ header {
   z-index: -1;
 }
 
+.social-element {
+  display: -ms-inline-flexbox;  
+  display: -webkit-box;  
+}
+
 .social-element.twitter:hover {  
   background: linear-gradient(to right, rgb(120,210,250) 10%, #586674);  
 }
