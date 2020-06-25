@@ -247,7 +247,7 @@ This concludes with the Day 02 challenge from 25 Days of Serverless.
 
 Now that it's my second time using the AWS SAM CLI, I could move faster and get straight to what was needed to solve the problem. 
 
-I loved how you can [create events with the CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-local-generate-event.html) and [use them to locally test your Lamda functions] (https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-local-invoke.html). Definitely helps a lot since you don't have to deploy everything to test your changes.
+I loved how you can [create events with the CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-local-generate-event.html) and [use them to locally test your Lamda functions](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-cli-command-reference-sam-local-invoke.html). Definitely helps a lot since you don't have to deploy everything to test your changes.
 
 ***
 

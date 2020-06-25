@@ -40,9 +40,7 @@ Contrary to other frameworks, Stimulus doesn't take over your front-end, so you 
 
 **Its documentation is very clear and digestible**. Included in its handbook is an [example of building a clipboard functionality](https://stimulusjs.org/handbook/building-something-real), which I recommend you go through if you are trying Stimulus for the first time.
 
-Right now we are **replicating** that functionality and adding a couple more things **using a development build** specified in this Pull Request (PR)
-
-[github](https://github.com/stimulusjs/stimulus/pull/202)
+Right now we are **replicating** that functionality and adding a couple more things **using a development build** specified in [this Pull Request (PR)](https://github.com/stimulusjs/stimulus/pull/202).
 
 It **includes new APIs that will be released with version 2.0** of the framework, so they are not yet available with the current stable production release.
 
@@ -50,9 +48,7 @@ It **includes new APIs that will be released with version 2.0** of the framework
 
 A one-time password "copy to clipboard" button what wraps the DOM Clipboard API.
 
-You can access the final working version on [Glitch](https://glitch.com/edit/#!/trapezoidal-seer):
-
-[glitch](trapezoidal-seer)
+You can access the final working version on [Glitch](https://glitch.com/edit/#!/trapezoidal-seer).
 
 ## Starting off
 
@@ -72,7 +68,6 @@ First, we are creating our base HTML where the one-time password will be and the
 ```
 
 ![Text input with "copy to clipboard button" rendered HTML](https://thepracticaldev.s3.amazonaws.com/i/bu8kact7stjzee0flm5a.png)
-
 
 This doesn't do anything by itself; we need to add our Stimulus controller.
 

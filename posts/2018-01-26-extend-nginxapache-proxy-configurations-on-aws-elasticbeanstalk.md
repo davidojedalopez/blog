@@ -45,7 +45,49 @@ I'm going to extend the default nginx proxy configurations using .ebextensions. 
 
 First we need to create a .conf file with the desired directives. A list of nginx directives can be found <a href="http://nginx.org/en/docs/dirindex.html"> here.</a> My conf file- named proxy.conf -increases some timeouts of the proxy:
 
-[gist](https://gist.github.com/davidojedalopez/b3735a658fbd645b38a13405f9eae8fa)
+```bash
+# Elastic Beanstalk Nginx Configuration File
+
+user                    nginx;
+error_log               /var/log/nginx/error.log warn;
+pid                     /var/run/nginx.pid;
+worker_processes        auto;
+worker_rlimit_nofile    200000;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    include       conf.d/*.conf;
+
+    map $http_upgrade $connection_upgrade {
+        default     "upgrade";
+    }
+
+    server {
+        listen        80 default_server;
+        access_log    /var/log/nginx/access.log main;
+
+        client_header_timeout 60;
+        client_body_timeout   60;
+        keepalive_timeout     60;
+        gzip                  on;
+        gzip_comp_level       4;
+        gzip_types text/plain text/css application/json application/javascript application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+
+        # Include the Elastic Beanstalk generated locations
+        include conf.d/elasticbeanstalk/*.conf;
+    }
+}
+```
 
 ## Create nginx conf.d directory
 
@@ -60,7 +102,49 @@ Now, when you deploy a new version of your application, ElasticBeanstalk will au
 
 This all works because the default nginx.conf file- on line 21 -specifies to include all .conf files under the conf.d directory:
 
-[gist](https://gist.github.com/davidojedalopez/680ae751eb2a3fd46c3bca04a33c5a4c)
+```bash
+# Elastic Beanstalk Nginx Configuration File
+
+user                    nginx;
+error_log               /var/log/nginx/error.log warn;
+pid                     /var/run/nginx.pid;
+worker_processes        auto;
+worker_rlimit_nofile    200000;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    include       conf.d/*.conf;
+
+    map $http_upgrade $connection_upgrade {
+        default     "upgrade";
+    }
+
+    server {
+        listen        80 default_server;
+        access_log    /var/log/nginx/access.log main;
+
+        client_header_timeout 60;
+        client_body_timeout   60;
+        keepalive_timeout     60;
+        gzip                  on;
+        gzip_comp_level       4;
+        gzip_types text/plain text/css application/json application/javascript application/x-javascript text/xml application/xml application/xml+rss text/javascript;
+
+        # Include the Elastic Beanstalk generated locations
+        include conf.d/elasticbeanstalk/*.conf;
+    }
+}
+```
 
 The directives from the .conf file will be added to the <em>http</em> block of the default configuration.
 

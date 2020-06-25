@@ -20,14 +20,13 @@ tag_list:
 canonical_url: 'https://dev.to/david_ojeda/hi-im-david-ojeda'
 ---
 
-Hello everyone! ðŸ––ðŸ¼
-
+Hello everyone! 👋🏼
 
 I have been coding for around 2.5 years now; 1.5 of those just learning and building really small stuff, the rest actually working as a software developer. 
 
-You can find me on Twitter as [@DavidOjedaL](https://twitter.com/DavidOjedaL). I usually post/retweet code related info, but lately have been getting into running too ðŸƒðŸ½ðŸ’¨ 
+You can find me on Twitter as [@DavidOjedaL](https://twitter.com/DavidOjedaL). I usually post/retweet code related info, but lately have been getting into running too 🏃🏻‍♂️.
 
-I live in Guadalajara, MÃ©xico ðŸ‡²ðŸ‡½
+I live in Guadalajara, México 🇲🇽.
 
 I work for Handy. We develop and maintain a sales workforce automation mobile and web application (also called Handy). We basically help companies sell more by providing visibility and control of sales operations, and tools for the sales people.  
 
@@ -37,7 +36,7 @@ I am currently learning more about DevOps and Machine Learning.
 
 Recurrent reader of so much awesome content here on dev.to, and just decided to start writing some stuff myself!
 
-I am also a huuuuge fan of Overwatch, so if anyone's looking for some great matches, do talk to me ðŸ˜‹
+I am also a huuuuge fan of Overwatch, so if anyone's looking for some great matches, do talk to me 😁.
 
 
 

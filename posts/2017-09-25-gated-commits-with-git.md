@@ -54,8 +54,6 @@ ___
 
 <code>rake test:units</code>
 
-<br><br>
-
 <p>Or if you are into the JS hype, you can probably have this in your file:</p>
 
 <code>npm tests</code>
@@ -80,7 +78,9 @@ ___
 
 ![Unsuccessful gated commit](https://thepracticaldev.s3.amazonaws.com/i/4g9jrtcxh85z1av658vq.png)
 
-<h4>Sad face 🙁</h4>
+<h4>
+  <strong>Sad face 🙁</strong>
+</h4>
 
 <h3>Wrapping up</h3>
 

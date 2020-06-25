@@ -1,7 +1,7 @@
 .blog-post {
   @apply pl-8 pr-8;
   background: rgb(88,102,116);
-  background: linear-gradient(0deg, rgba(88,102,116,1) 0%, rgba(42,55,68,1) 25%);
+  background: linear-gradient(0deg, rgba(88,102,116,1) 0%, rgba(42,55,68,1) 20%);
   min-height: 80vh;
 }
 
@@ -86,11 +86,11 @@
 }
 
 .blog-post blockquote {
-  @apply ml-4 bg-tertiary rounded-sm p-4;
+  @apply m-4 bg-tertiary rounded-sm p-4;
 }
 
 .blog-post blockquote p {
-  @apply text-background;
+  @apply text-background mb-0;
 }
 
 .blog-post strong {
@@ -99,4 +99,8 @@
 
 .blog-post hr {
   @apply my-4 border-primary;
+}
+
+.blog-post .direct-link {
+  @apply text-base text-tertiary;
 }

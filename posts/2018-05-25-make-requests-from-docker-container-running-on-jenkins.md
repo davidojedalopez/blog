@@ -69,7 +69,7 @@ stage('build and test apps') {
 
 The requests needed on the `npm install` command were **failing with 403 http errors** and this log was appearing:
 
-```text
+```bash
 npm ERR! Unexpected token < in JSON at position 0
 npm ERR! <html><head><meta http-equiv='refresh' content='1;url=/login?from=%2Freact-scripts'/><script>window.location.replace('/login?from=%2Freact-scripts');</script></head><body style='background-color:white; color:white;'>
 npm ERR!
@@ -100,7 +100,7 @@ After debugging for quite a while, I stumbled upon <a href="https://stackoverflo
 
 First, check your current iptables with this command: ```iptables -t nat -L -n --line-numbers```
 
-```
+```bash
 Chain PREROUTING (policy ACCEPT)
 num  target     prot opt source               destination
 1    REDIRECT   tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:80 redir ports 8080
@@ -132,21 +132,21 @@ The value **0.0.0.0/0** on the source column refers to **all** trafic. So, in my
 
 **PREROUTING**
 
-```
+```bash
 iptables -t nat -R PREROUTING 1 ! -s 172.17.0.0/16 -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 8080
 ```
 
-```
+```bash
 iptables -t nat -R PREROUTING 2 ! -s 172.17.0.0/16 -p tcp -m tcp --dport 443 -j REDIRECT --to-ports 8443
 ```
 
 **OUTPUT**
 
-```
+```bash
 iptables -t nat -R OUTPUT 1 ! -s 172.17.0.0/16 -d 127.0.0.1/32 -p tcp -m tcp --dport 443 -j REDIRECT --to-ports 8443
 ```
 
-```
+```bash
 iptables -t nat -R OUTPUT 2 ! -s 172.17.0.0/16 -d 127.0.0.1/32 -p tcp -m tcp --dport 80 -j REDIRECT --to-ports 8080
 ```
 

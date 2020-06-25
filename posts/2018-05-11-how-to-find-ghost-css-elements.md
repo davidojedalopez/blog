@@ -22,15 +22,6 @@ tag_list:
   - html
 ---
 
-<details open>
-  <summary>
-    Index
-  </summary>
-
-  [[toc]]
-
-</details>
-
 I recently came across a bug on our landing page which caused a weird blank space overflow on the right side:
 
 ![Landing page with extra white space on right side][landing-page-bug]

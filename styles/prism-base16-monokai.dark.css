@@ -16,6 +16,7 @@ code[class*="language-"], pre[class*="language-"] {
 	background: #272822;
 	color: #f8f8f2;
 }
+
 pre[class*="language-"] {
 	padding: 1.5em 0;
 	margin: .5em 0;
@@ -23,7 +24,7 @@ pre[class*="language-"] {
 }
 :not(pre) > code[class*="language-"] {
 	padding: .1em;
-	border-radius: .3em;
+	border-radius: .3em;	
 }
 .token.comment, .token.prolog, .token.doctype, .token.cdata {
 	color: #75715e;
@@ -86,4 +87,11 @@ pre[class*="language-"] {
 pre > code.highlight {
 	outline: 0.4em solid #f92672;
 	outline-offset: .4em;
+}
+
+code {	
+	background: #272822;
+	color: #f8f8f2;
+	padding: .25rem;
+	hyphens: none;
 }

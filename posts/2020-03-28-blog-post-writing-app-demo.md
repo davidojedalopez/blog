@@ -28,11 +28,9 @@ I want to showcase an app I've been working on for the past few weeks. It aims t
 - Different post destinations use different formats; HTML, Markdown, etc.
 - I don't like to use apps that don't respect my privacy, e.g., Grammarly.
 
-I made a video tour of my work so far; bare with me please since I'm terrible at video 😅
+I [made a video tour of my work](https://www.youtube.com/watch?v=NICjX4w85jg) so far; bare with me please since I'm terrible at video 😅
 
-[youtube](NICjX4w85jg)
-
-## A brief summary:
+## A brief summary
 
 A **blog post writing app** to **write your content once**, and **publish it anywhere** you want.
 

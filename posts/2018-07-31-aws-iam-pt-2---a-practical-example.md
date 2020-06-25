@@ -34,7 +34,7 @@ tag_list:
 
 *Part one of this series covers IAM basics and a general use case:*
 
-[AWS IAM pt1](https://dev.to/david_ojeda/aws-iam-pt-1---the-basics-139h)
+[AWS IAM pt1](/posts/2018-07-31-aws-iam-pt-2---a-practical-example)
 
 *Part two is the implementation of the use case in part one, that is, the creation of users, groups and policies to restrict access to some AWS services.*
 
