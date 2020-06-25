@@ -11,6 +11,11 @@ permalink: "404.html"
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">    
     <link rel="stylesheet" type="text/css" href="{{ '/assets/main.css' | url }}" >
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/img/apple-touch-icon.png' | url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/img/favicon-32x32.png' | url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/favicon-16x16.png' | url }}">
+    
   </head>
   <body class="bg-background">
     <h1 class="text-primary p-4">You got lost 🤪</h1>
