@@ -79,7 +79,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addShortcode("social", (name, description, link) => {    
     return `
     <a href="${link}" class="social-element ${name.toLowerCase()} ${name === 'instagram' ? 'sm:flex-col sm:items-center sm:ml-2 md:flex-row w-full sm:w-auto md:w-1/2' : ''} rounded-lg p-3 no-underline sm:mb-6 leading-tight sm:leading-snug cursor-pointer group">
-      <img src="./img/${name}.svg" class="" width="40" />
+      <img src="./img/${name}.svg" class="" width="40" alt="${name} logo" />
       <div class="w-full pl-4">
         <h3 class="capitalize">${name}<span class="text-sm pl-1">🔗</span></h3>
         <p class="text-base">${description}</p>
