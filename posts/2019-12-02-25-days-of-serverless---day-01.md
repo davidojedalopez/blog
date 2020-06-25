@@ -8,7 +8,7 @@ cover_image: >-
   https://res.cloudinary.com/practicaldev/image/fetch/s--k0KWRU4j--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/4ld34pt62433i7mwh1zb.jpeg
 type_of: article
 id: 214252
-published_at: '2019-12-02'
+published_at: 2019-12-02
 slug: 25-days-of-serverless-day-01-3g4b
 path: /david_ojeda/25-days-of-serverless-day-01-3g4b
 url: 'https://dev.to/david_ojeda/25-days-of-serverless-day-01-3g4b'

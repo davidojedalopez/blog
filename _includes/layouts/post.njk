@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.njk
 templateClass: tmpl-post
+permalink: "posts/{{ published_at | slugDate }}/{{ title | slug }}/"
 ---
 
 <div class="pl-4 pt-8">
@@ -24,3 +25,5 @@ templateClass: tmpl-post
 
 
 {# <p><a href="{{ '/' | url }}">← Home</a></p> #}
+
+{% include "footer.njk" %}

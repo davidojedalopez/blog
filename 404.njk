@@ -1,21 +1,23 @@
+---
+permalink: "404.html"
+---
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ renderData.title or title or metadata.title }}</title>
-    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
-    <link rel="stylesheet" type="text/css" href="{{ '/assets/prism-base16-monokai.dark.css' | url }}">    
+    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">    
     <link rel="stylesheet" type="text/css" href="{{ '/assets/main.css' | url }}" >
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
   </head>
-  <body class="leading-snug">          
-
-      <main class="bg-background">
-        {{ content | safe }}
-      </main>      
-    
-    <!-- Current page: {{ page.url | url }} -->
+  <body class="bg-background">
+    <h1 class="text-primary p-4">You got lost 🤪</h1>
+        
+    <div class="pl-4 pt-4">
+      <a class="bg-background p-2 rounded-md border-2 border-tertiary shadow-lg focus:shadow-outline hover:bg-foreground border-b-4 no-underline text-tertiary" href="{{ '/' | url }}">Get back!</a>
+    </div>
     <script src="{{ '/assets/main.js' | url }}"></script>
   </body>
 </html>
