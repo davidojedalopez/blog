@@ -1,13 +1,10 @@
 .blog-post {
-  @apply pl-8 pr-8;
-  background: rgb(88,102,116);
-  background: linear-gradient(0deg, rgba(88,102,116,1) 0%, rgba(42,55,68,1) 20%);
   min-height: 80vh;
 }
 
 @screen lg {
   .blog-post {
-    padding-right: 50vw;
+    
   }
 }
 
@@ -103,4 +100,12 @@
 
 .blog-post .direct-link {
   @apply text-base text-tertiary;
+}
+
+.blog-post a {
+  @apply text-secondary;
+}
+
+.blog-post a:hover {
+  @apply text-primary;
 }

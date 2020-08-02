@@ -3,23 +3,17 @@
   transform: scale(-1, 1);
 }
 
-header {  
+.index-header {  
   background-image: url('/img/header.svg');
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-
   min-height: 9rem;
 }
 
 .divider {
   top: 50%;
   z-index: -1;
-}
-
-.social-element {
-  display: -ms-inline-flexbox;  
-  display: -webkit-box;  
 }
 
 .social-element.twitter:hover {  
@@ -54,47 +48,8 @@ header {
   }  
 }
 
-#social {
-  min-height: 21em;  
-}
-
-#favorites {
-  
-}
-
 .basis-75 {
   flex-basis: 75%;
-}
-
-footer {
-  background-image: url('/img/footer.svg');
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  height: 10rem;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-areas: 
-    "books board"
-    "games posts"
-    "twitter music"
-  ;    
-}
-
-@media (min-width: 1024px) {
-  .grid-container {    
-    justify-items: end;
-    grid-template-areas: 
-      "music"
-      "books"
-      "posts"
-      "board"
-      "games"
-      "twitter"
-    ; 
-  }
 }
 
 .grid-self-end {
@@ -109,7 +64,6 @@ footer {
   text-shadow: 1px 1px 2px #586674;
 }
 
-.all-posts {
-  background: rgb(88,102,116);
-  background: linear-gradient(0deg, rgba(88,102,116,1) 0%, rgba(42,55,68,1) 20%);
+.header-button {
+  @apply text-black text-base p-2 no-underline cursor-pointer bg-tertiary rounded border-2 border-transparent;
 }

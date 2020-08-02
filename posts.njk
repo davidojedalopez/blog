@@ -2,10 +2,12 @@
 layout: layouts/base.njk
 ---
 
+{% include "header.njk" %}
+
 {% set postsList = collections.posts %}
 {% set postsListCount = collections.posts | length %}
 
-<div class="all-posts">
+<div class="">
   {% include "sections/blog.njk" %}
 </div>
 

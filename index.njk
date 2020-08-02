@@ -2,7 +2,15 @@
 layout: layouts/base.njk
 ---
 
-{% include "header.njk" %}
+<header class="index-header flex main-content-padding pt-4 bg-background px-5 sm:px-16 md:px-32 lg:px-56 xl:px-64 pb-16">
+  <div class="flex-1">
+    <span class="text-secondary sm:text-lg">Hi, I'm</span>
+    <span class="transform translate-x-8 -rotate-6 text-primary text-5xl sm:text-5xl leading-none font-black text-shadow-bg block">
+      David<br> &nbsp;&nbsp;Ojeda
+    </span>
+  </div>
+  <span class="flex-1 text-secondary text-lg text-2xl sm:text-3xl font-bold self-start md:self-center text-center">Web enthusiast & fullstack developer</span>
+</header>
 
 {% set postsList = collections.posts | head(-4) %}
 {% set postsListCount = collections.posts | length %}
@@ -10,16 +18,12 @@ layout: layouts/base.njk
 {% include "sections/blog.njk" %}
 
 <div class="flex justify-center">  
-  <a href="{{ './posts' | url }}" class="w-4/5 max-w-xl lg:max-w-2xl mt-6 text-3xl text-primary bg-background border-2 rounded border-primary p-1 font-bold shadow-lg focus:outline-none focus:shadow-outline hover:bg-foreground border-b-4 no-underline text-center">Show all posts</a>
+  <a href="{{ './posts' | url }}" class="w-4/5 lg:w-1/2 max-w-xl lg:max-w-2xl mt-6 text-3xl text-primary bg-background border-2 rounded border-primary p-1 font-bold shadow-lg focus:outline-none focus:shadow-outline hover:bg-foreground border-b-4 no-underline text-center">Show all posts</a>
 </div>
 
-<div class="flex flex-col lg:flex-row ">  
-  <svg class="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2A3744" fill-opacity="1" d="M0,0L80,5.3C160,11,320,21,480,26.7C640,32,800,32,960,42.7C1120,53,1280,75,1360,85.3L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path></svg>
+{% include "sections/social.njk" %}
 
-  {% include "sections/social.njk" %}
-
-  {% include "sections/favorites.njk" %}  
-</div>
+{% include "sections/favorites.njk" %}
 
 {% include "footer.njk" %}
 

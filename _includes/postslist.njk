@@ -2,11 +2,8 @@
   <p>Most recent</p>
 </div>
 
-<div class="">
-  <ul class="max-w-xl lg:max-w-2xl pl-1 list-none divide-opacity-50 divide-primary flex-auto">
-    {% for post in postsList | reverse %}
-      {% include "postitem.njk" %}
-    {% endfor %}
-  </ul>
-    
-</div>
+<ul class="list-none divide-opacity-50 divide-primary flex-auto">
+  {% for post in postsList | reverse %}
+    {% include "postitem.njk" %}
+  {% endfor %}
+</ul>
