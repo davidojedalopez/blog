@@ -1,15 +1,16 @@
 {
   "title": "David Ojeda",
-  "url": "https://myurl.com/",
-  "description": "Web development.",
+  "url": "https://davidojeda.dev",
+  "description": "Web enthusiastic and AWS Solutions Architect Associate.",
+  "default_cover": "/img/david_ojeda.jpeg",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "Web enthusiastic and AWS Solutions Architect Associate.",
     "filename": "feed.xml",
-    "path": "/feed/feed.xml",
-    "id": "https://myurl.com/"
+    "path": "/feed.xml",
+    "id": "https://davidojeda.dev/"
   },
   "author": {
     "name": "David Ojeda",
-    "email": "david.ojeda.lopez@gmail.com"
+    "email": "davidojeda@hey.com"
   }
 }
