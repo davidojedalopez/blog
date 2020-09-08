@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+---
+
+{% include "header.njk" %}
+
+{% set boardGames = collections.boardGames %}
+{% set boardGamesCount = collections.boardGames | length %}
+
+{% for game in boardGames %}
+  {% include "boardGameItem.njk" %}
+{% endfor %}
+
+{% include "footer.njk" %}
