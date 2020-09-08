@@ -55,7 +55,7 @@ I wish this previous sentence was part of the challenge's website.
 
 Whenever I couldn't find a time slot to work on the challenge I felt **anxious**. Even if no one would even notice that I missed one day. Not even your all-time-friends: the bots.
 
-But you already committed publicly to the challenge! You feel pressured. And many days I would open my computer, do some silly change to my code, and tweet about it. Damn, I even felt stupid sharing changes so small that where nowhere near the 1 hour commit I should be doing:
+But you already committed publicly to the challenge! You feel pressured. And many days I would open my computer, do some silly change to my code, and tweet about it. Damn, I even felt stupid sharing changes so small that were nowhere near the 1-hour commit I should be doing:
 
 <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">Day 66 of <a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a><br><br>Today I only added a small gradient to my social links 😅<br><br>I&#39;ll probably finish this section tomorrow 💪🏼 <a href="https://t.co/G0FsZ64gqN">pic.twitter.com/G0FsZ64gqN</a></p>&mdash; David Ojeda 🇲🇽 (@DavidOjedaL) <a href="https://twitter.com/DavidOjedaL/status/1265895861688688642?ref_src=twsrc%5Etfw">May 28, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
